@@ -29,7 +29,7 @@ export default function TodosList({todos, setTodos, setEditTodo}) {
     <div>
         {todos.map((todo) => (
             <li className='list-item' key={todo.id}>
-                <input type="text" value={todo.title} className="list" onChange={(e) => e.preventDefault() }  />
+                <input type="text" value={todo.title} className={`list ${todo.completed ? "complete" : ""}`} onChange={(e) => e.preventDefault() }  />
                 <div>
                     {
                         todo.completed === true ? (

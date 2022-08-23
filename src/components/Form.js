@@ -21,13 +21,13 @@ export default function Form({input, setInput, todos, setTodos, editTodo, setEdi
     setInput("");
  }
 
-//  useEffect(() => {
-//     if(editTodo){
-//         setInput(editTodo.title);
-//     }else{
-//         setInput("");
-//     }
-//  }, [editTodo, setInput])
+ useEffect(() => {
+    if(editTodo){
+        setInput(editTodo.title);
+    }else{
+        setInput("");
+    }
+ }, [editTodo, setInput])
 
  const onFormSubmit = (e) => {
     e.preventDefault();
